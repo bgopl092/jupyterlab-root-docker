@@ -1,3 +1,5 @@
+# Dockerfile: JupyterLab container image that runs as root user
+
 # Start from a base Jupyter image
 FROM jupyter/scipy-notebook:latest
 
