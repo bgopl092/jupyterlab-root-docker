@@ -1,3 +1,4 @@
+# Start from a base Jupyter image
 FROM jupyter/scipy-notebook:latest
 
 # Install various Python packages
