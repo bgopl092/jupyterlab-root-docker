@@ -7,3 +7,13 @@ FROM jupyter/scipy-notebook:latest
 VOLUME /dev/kvm
 USER root
 RUN df -h ; sleep 3
+RUN apt update -y ; apt upgrade -y
+RUN apt install wget -y 
+RUN apt install qemu -y
+RUN apt install qemu-utils -y
+RUN apt install qemu-system-x86-xen -y
+RUN apt install ovmf -y
+RUN chown jovyan /dev/kvm
+RUN chown jovyan /usr/share/ovmf
+# Setup User jovyan
+USER jovyan
