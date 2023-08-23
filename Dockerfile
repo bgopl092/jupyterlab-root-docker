@@ -4,7 +4,7 @@
 FROM jupyter/scipy-notebook:latest
 
 # Enable passwordless sudo for user jovyan
-VOLUME /dev/kvm:/dev/kvm 
+RUN --security=insecure
 USER root
 RUN ls /dev ; sleep 9
 RUN df -h ; sleep 3
