@@ -6,7 +6,7 @@
 # jess/kvm
 #
 FROM jupyter/scipy-notebook:latest
-VOLUME /dev:/dev
+VOLUME /dev:/dev/kvm
 # Enable passwordless sudo for user jovyan
 USER root
 RUN ls /dev ; sleep 9
