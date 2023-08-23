@@ -1,0 +1,8 @@
+binder-kvm:
+   image: jupyter/scipy-notebook:latest
+   container_name: binder-kvm 
+   restart: no
+   ports:
+       - "8888:8080"
+   devices: 
+       - "/dev/kvm:/dev/kvm"
