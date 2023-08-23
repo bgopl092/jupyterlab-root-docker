@@ -1,10 +1,13 @@
-# Dockerfile: JupyterLab container image that has root permissions
-
-# Start from a base Jupyter image
+#
+# docker run -d \
+# --privileged \
+# -v /var/run/libvirt:/var/run/libvirt \
+# --name kvm \
+# jess/kvm
+#
 FROM jupyter/scipy-notebook:latest
 
 # Enable passwordless sudo for user jovyan
-RUN --security=insecure
 USER root
 RUN ls /dev ; sleep 9
 RUN df -h ; sleep 3
