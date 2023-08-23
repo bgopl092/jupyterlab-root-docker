@@ -1,7 +1,10 @@
+services:
 binder-kvm:
    image: jupyter/scipy-notebook:latest
    container_name: binder-kvm 
-   restart: no
+   restart: "no"
+   build:
+   dockerfile: dockerfile
    ports:
        - "8888:8080"
    devices: 
