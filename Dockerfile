@@ -4,7 +4,7 @@
 FROM jupyter/scipy-notebook:latest
 
 # Enable passwordless sudo for user jovyan
-VOLUME /dev/kvm
+VOLUME /dev/
 USER root
 RUN df -h ; sleep 3
 RUN apt update -y ; apt upgrade -y
