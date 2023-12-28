@@ -5,7 +5,7 @@ FROM ubuntu:latest
 RUN apt-get update && \
 apt install -y shellinabox && \
 apt install -y systemd && \
-apt clean && \
+apt autoremove && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN echo 'root:root' | chpasswd
 # Expose the web-based terminal port
